@@ -125,7 +125,7 @@ function createHTMLBoard(
         e.preventDefault();
         cell.classList.toggle("flag");
         if (cell.classList.contains("flag")) {
-          if (!cell.classList.contains("bomb")) {
+          if (!cell.classList.contains("bomb") && verifyFlags) {
             gameOver(grid);
           }
           cell.textContent = "";
