@@ -129,10 +129,10 @@ function createHTMLBoard(
             gameOver(grid);
           }
           cell.textContent = "";
-          if (changeBombNums) changeNeighbors(grid, x, y, -1, true);
+          if (changeBombNums) changeNeighbors(grid, x, y, -1, verifyFlags);
         } else {
           cell.textContent = cell.getAttribute("data-bombs");
-          if (changeBombNums) changeNeighbors(grid, x, y, 1, true);
+          if (changeBombNums) changeNeighbors(grid, x, y, 1, verifyFlags);
         }
       });
 
